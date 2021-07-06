@@ -80,7 +80,7 @@ class Embedding(nn.Module):
             #     assert emb_size == emb_init.shape[1]
             vocab_size, emb_size = emb_init.shape
             # vocab_size, nn_emb_size = emb_init.shape
-        self.emb = nn.Embedding(vocab_size, nn_emb_size, padding_idx=padding_idx, sparse=True,
+        self.emb = nn.Embedding(vocab_size, emb_size, padding_idx=padding_idx, sparse=True,
                                 _weight=torch.from_numpy(emb_init).float() if emb_init is not None else None)
         self.emb.weight.requires_grad = emb_trainable
         self.dropout = nn.Dropout(dropout)
