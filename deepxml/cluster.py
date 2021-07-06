@@ -17,7 +17,7 @@ from deepxml.data_utils import get_sparse_feature
 
 __all__ = ['build_tree_by_level']
 
-# n2v_emb = pd.read_table("/home/bfs/AttentionXML/data/Amazon-670K/n2vembeddings.emb")
+n2v_emb = pd.read_table("/root/XML2/data/Amazon-670K/n2vembeddings.emb")
 
 def build_tree_by_level(sparse_data_x, sparse_data_y, mlb, eps: float, max_leaf: int, levels: list, groups_path):
     os.makedirs(os.path.split(groups_path)[0], exist_ok=True)
