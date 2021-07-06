@@ -80,9 +80,9 @@ class Embedding(nn.Module):
             #     assert emb_size == emb_init.shape[1]
             vocab_size, emb_size = emb_init.shape
             # vocab_size, nn_emb_size = emb_init.shape
-        self.emb = nn.Embedding(vocab_size, emb_size, padding_idx=padding_idx, sparse=True,
-                                _weight=torch.from_numpy(emb_init).float() if emb_init is not None else None)
-        self.emb.weight.requires_grad = emb_trainable
+        # self.emb = nn.Embedding(vocab_size, emb_size, padding_idx=padding_idx, sparse=True,
+        #                         _weight=torch.from_numpy(emb_init).float() if emb_init is not None else None)
+        # self.emb.weight.requires_grad = emb_trainable
         self.dropout = nn.Dropout(dropout)
         self.padding_idx = padding_idx
 
@@ -90,9 +90,9 @@ class Embedding(nn.Module):
         # nn_emb = self.emb
         # print(type(nn_emb))
         # print(nn_emb)
-        # emb = flair_Embedding(inputs)
-        # emb_out = self.dropout(emb)
-        emb_out = self.dropout(self.emb(inputs))
+        emb = flair_Embedding(inputs)
+        emb_out = self.dropout(emb)
+        # emb_out = self.dropout(self.emb(inputs))
         lengths, masks = (inputs != self.padding_idx).sum(dim=-1), inputs != self.padding_idx
         return emb_out[:, :lengths.max()], lengths, masks[:, :lengths.max()]
 
