@@ -11,7 +11,7 @@ test:
   texts: /root/XML/data/Wiki10-31K/test_texts.npy
 
 embedding:
-  emb_init: /root/XMLe/data/Wiki10-31K/emb_init.npy
+  emb_init: /root/XML/data/Wiki10-31K/emb_init.npy
 
 output:
   res: results
