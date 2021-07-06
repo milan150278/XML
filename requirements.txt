@@ -1,0 +1,17 @@
+click
+ruamel.yaml
+numpy
+scipy
+scikit-learn
+gensim
+torch
+nltk
+tqdm
+joblib
+logzero
+tabulate
+regex
+transformers
+lxml
+pandas
+segtok

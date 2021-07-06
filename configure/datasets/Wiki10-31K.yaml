@@ -1,0 +1,23 @@
+name: Wiki10-31K
+
+train:
+  texts: /root/AttentionXML/code/data/Wiki10-31K/train_raw_texts.npy
+  labels: /root/AttentionXML/code/data/Wiki10-31K/train_labels.npy
+
+valid:
+  size: 200
+
+test:
+  texts: /root/AttentionXML/code/data/Wiki10-31K/test_raw_texts.npy
+
+embedding:
+  emb_init: /root/AttentionXML/code/data/Wiki10-31K/emb_init.npy
+
+output:
+  res: results
+
+labels_binarizer: /root/AttentionXML/code/data/Wiki10-31K/labels_binarizer
+
+model:
+  emb_size: 300
+  #emb_size: 868
