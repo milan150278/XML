@@ -2,7 +2,7 @@ click
 ruamel.yaml
 numpy
 scipy
-scikit-learn
+scikit-learn==0.22.0
 gensim
 torch
 nltk
@@ -15,3 +15,6 @@ transformers
 lxml
 pandas
 segtok
+deprecated
+ftfy
+bpemb
