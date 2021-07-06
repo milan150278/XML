@@ -24,8 +24,8 @@ from flair.embeddings import (
 __all__ = ['Embedding', 'LSTMEncoder', 'MLAttention', 'AttentionWeights', 'FastMLAttention', 'MLLinear']
 stacked_embeddings = StackedEmbeddings(embeddings=[WordEmbeddings('glove'),
 #                                                NILCEmbeddings('word2vec')('word2vec')
-                                                TransformerWordEmbeddings('xlnet-base-cased')
-                                                # TransformerWordEmbeddings('bert-base-multilingual-cased')
+#                                                TransformerWordEmbeddings('xlnet-base-cased')
+                                                 TransformerWordEmbeddings('bert-base-multilingual-cased')
                                                        ])
 
 def flair_Embedding(inputs):
