@@ -81,8 +81,10 @@ class Model(object):
                             return
                     self.swap_swa_params()
                     if verbose:
-                        logger.info(F'{epoch_idx} {i * train_loader.batch_size} train loss: {torch.round(loss, 5)} '
-                                    F'P@5: {torch.round(p5, 5)} nDCG@5: {torch.round(n5, 5)} early stop: {e}')
+                        #logger.info(F'{epoch_idx} {i * train_loader.batch_size} train loss: {round(loss, 5)} '
+                        #            F'P@5: {round(p5, 5)} nDCG@5: {round(n5, 5)} early stop: {e}')
+                        logger.info(F'{epoch_idx} {i * train_loader.batch_size} train loss: {loss}'
+                                    F'P@5: {p5} nDCG@5: {n5} early stop: {e}')
 
     def predict(self, data_loader: DataLoader, k=100, desc='Predict', **kwargs):
         self.load_model()
