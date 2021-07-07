@@ -19,5 +19,5 @@ output:
 labels_binarizer: /root/XML/data/AmazonCat-13K/labels_binarizer
 
 model:
-  emb_size: 300
-#  emb_size: 868
+  #emb_size: 300
+  emb_size: 868
