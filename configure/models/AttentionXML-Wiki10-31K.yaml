@@ -9,7 +9,7 @@ model:
 
 train:
   batch_size: 40
-  nb_epoch: 30
+  nb_epoch: 50
   swa_warmup: 4
 
 valid:
