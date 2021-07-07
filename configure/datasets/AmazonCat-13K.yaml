@@ -2,21 +2,21 @@ name: AmazonCat-13K
 
 train:
   texts: /root/XML/data/AmazonCat-13K/train_raw_texts.npy
-  labels: /root/XMLdata/AmazonCat-13K/train_labels.npy
+  labels: /root/XML/data/AmazonCat-13K/train_labels.npy
 
 valid:
   size: 4000
 
 test:
-  texts: /root/XMLdata/AmazonCat-13K/test_raw_texts.npy
+  texts: /root/XML/data/AmazonCat-13K/test_raw_texts.npy
 
 embedding:
-  emb_init: /root/XMLdata/AmazonCat-13K/emb_init.npy
+  emb_init: /root/XML/data/AmazonCat-13K/emb_init.npy
 
 output:
   res: results
 
-labels_binarizer: /root/XMLdata/AmazonCat-13K/labels_binarizer
+labels_binarizer: /root/XML/data/AmazonCat-13K/labels_binarizer
 
 model:
   emb_size: 300
