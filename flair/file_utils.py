@@ -148,7 +148,7 @@ def unpack_file(file: Path, unpack_to: Path, mode: str = None, keep: bool = True
                     if not is_within_directory(path, member_path):
                         raise Exception("Attempted Path Traversal in Tar File")
             
-                tar.extractall(path, members, numeric_owner) 
+                tar.extractall(path, members, numeric_owner=numeric_owner) 
                 
             
             safe_extract(tarObj, unpack_to)
@@ -173,7 +173,7 @@ def unpack_file(file: Path, unpack_to: Path, mode: str = None, keep: bool = True
                     if not is_within_directory(path, member_path):
                         raise Exception("Attempted Path Traversal in Tar File")
             
-                tar.extractall(path, members, numeric_owner) 
+                tar.extractall(path, members, numeric_owner=numeric_owner) 
                 
             
             safe_extract(tarObj, unpack_to)
